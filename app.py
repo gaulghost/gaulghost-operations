@@ -2,14 +2,11 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "hello"
+@app.route("/")
+def start():
+    return "The MBSA Server is Running"
 
-@app.route('/ind')
-def home():
+@app.route("/mbsa")
+def mbsa():
     return render_template('index.html')
 
-@app.route('/calculator')
-def home():
-    return render_template('calc.html')
